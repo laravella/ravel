@@ -1,4 +1,4 @@
-<?php
+<?php namespace Controllers\Admin;
 
 class DashboardAdminController extends AdminController
 {
