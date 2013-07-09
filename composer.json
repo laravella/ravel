@@ -1,5 +1,5 @@
 {
-    "name": "raftalks/ravel",
+    "name": "laravella/ravel",
     "description": "CMS Package for Laravel 4 powered with Angularjs",
     "keywords": ["ravel","laravel","cms"],
     "license": "BSD",
@@ -7,12 +7,16 @@
         {
             "name": "Raf",
             "email": "raftalks@gmail.com"
+        },
+        {
+            "name": "Victor",
+            "email": "laravella.cms@gmail.com"
         }
     ],
     "require": {
         "php": ">=5.3.0",
         "laravel/framework": "4.0.*",
-        "raftalks/form": "1.3.*",
+        "laravella/form": "1.3.*",
         "mockery/mockery": "0.7.2",
         "intervention/image": "1.4.*"
     },
