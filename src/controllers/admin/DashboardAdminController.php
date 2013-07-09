@@ -12,4 +12,11 @@ class DashboardAdminController extends AdminController
 		$data = array();
 		$this->layout->nest('content','ravel::admin.dashboard.home',$data);
 	}
+        
+	public function getDashboard()
+	{
+
+		$data = array();
+		$this->layout->nest('content','ravel::admin.dashboard.home',$data);
+	}
 }

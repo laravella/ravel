@@ -5,7 +5,7 @@ return array(
 	'default' => array(
 		'dashboard'	=> array(
 						'label'=>'Dashboard', 
-						'link'=> action('DashboardAdminController@getDashboard')
+						'link'=> action('DashboardAdminController@getIndex')
 						),
 
 		'contents'		=> array(
