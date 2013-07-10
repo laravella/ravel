@@ -1,4 +1,4 @@
-<?php namespace Raftalks\Ravel;
+<?php namespace Laravella\Ravel;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
@@ -46,14 +46,14 @@ class RavelInstallCommand extends Command {
 
 		if($this->checkifWorkBench())
 		{
-			$this->call('asset:publish',array('--bench'=>'raftalks/ravel'));
-			$this->call('migrate',array('--bench'=>'raftalks/ravel'));
+			$this->call('asset:publish',array('--bench'=>'laravella/ravel'));
+			$this->call('migrate',array('--bench'=>'laravella/ravel'));
 		}
 		else
 		{	
-			$this->call('config:publish',array('package'=>'raftalks/ravel'));
-			$this->call('asset:publish',array('package'=>'raftalks/ravel'));
-			$this->call('migrate',array('--package'=>'raftalks/ravel'));
+			$this->call('config:publish',array('package'=>'laravella/ravel'));
+			$this->call('asset:publish',array('package'=>'laravella/ravel'));
+			$this->call('migrate',array('--package'=>'laravella/ravel'));
 		}
 
 		$this->call('db:seed',array('--class'=>'RavelDatabaseSeeder'));
@@ -67,7 +67,7 @@ class RavelInstallCommand extends Command {
 	public function checkifWorkBench()
 	{
 		$path = __FILE__;
-		return str_contains(strtolower($path),'/workbench/raftalks/ravel/');
+		return str_contains(strtolower($path),'/workbench/laravella/ravel/');
 	}
 
 	public function setupUploadDirectory()

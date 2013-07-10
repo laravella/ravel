@@ -1,4 +1,4 @@
-<?php namespace Raftalks\Ravel;
+<?php namespace Laravella\Ravel;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
