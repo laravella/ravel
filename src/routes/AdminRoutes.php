@@ -13,7 +13,7 @@ Route::filter('ravelauth', function()
 	if (Auth::guest()) return Redirect::action('AdminUserLoginController@getIndex');
 });
 
-Route::filter('admin', function()
+Route::get('/admin', function()
 {
     return Redirect::to('/admin/dashboard');
 });
