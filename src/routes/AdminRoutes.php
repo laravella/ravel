@@ -17,7 +17,7 @@ Route::filter('ravelauth', function()
 
 Route::group(array('prefix'=>_ADMIN_BASE_),function()
 {
-	Route::get('/','Controllers\\Admin\\DashboardAdminController@getIndex');
+	Route::get('/dashboard','Controllers\\Admin\\DashboardAdminController@getDashboard');
 	Route::get('/logout',array('uses'=>'AdminUserLoginController@getLogout','as'=>'ravellogout'));
 	Route::controller("/posts", 'PostsAdminController');
 	Route::controller("/categories",'PostsCategoriesAdminController');

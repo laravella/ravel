@@ -1,5 +1,7 @@
 <?php namespace Controllers\Admin;
 
+use \AdminController;
+
 class DashboardAdminController extends AdminController
 {
 	protected $title = "Dashboard";
