@@ -26,8 +26,7 @@ Route::group(array('prefix'=>_ADMIN_BASE_),function()
 	Route::controller("/posts", 'PostsAdminController');
 	Route::controller("/categories",'PostsCategoriesAdminController');
 	Route::controller("/pages", 'PagesAdminController');
-	Route::controller("/asdf", 'AdminUserLoginController');
-        Route::get('/login', function() {Redirect::to('/account/login');});
+	Route::controller("/login", 'AdminUserLoginController');
 	Route::controller("/settings/users", 'UsersAdminController');
 	Route::controller('/medias','MediaAdminController');
 	Route::controller('/menus','MenusAdminController');
