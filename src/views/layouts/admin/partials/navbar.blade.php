@@ -32,7 +32,6 @@
 							<li {{ (Request::is('/admin/posts/index') ? 'class="active"' : '') }}><a href="{{ URL::to('/admin/posts/index') }}"><i class="icon-pencil"></i> Posts</a></li>
 							<li {{ (Request::is('/admin/categories/index') ? 'class="active"' : '') }}><a href="{{ URL::to('/admin/categories/index') }}"><i class="icon-list"></i> Post Categories</a></li>
 							<li {{ (Request::is('/admin/medias/index') ? 'class="active"' : '') }}><a href="{{ URL::to('/admin/medias/index') }}"><i class="icon-picture"></i> Media</a></li>
-							<li {{ (Request::is('/admin/maps/index') ? 'class="active"' : '') }}><a href="{{ URL::to('/admin/maps/index') }}"><i class="icon-globe"></i> Maps</a></li>
 						</ul>								
 					</li>
 				</ul>
