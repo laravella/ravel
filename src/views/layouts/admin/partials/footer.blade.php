@@ -1,5 +1,5 @@
 <div id="footer">
 	<small>
-			&#169; Copyright 2013 Ravel Content Management System 
+			&#169; Copyright 
 	</small>
 </div><!-- End #footer -->
