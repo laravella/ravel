@@ -36,7 +36,7 @@
         @yield('assets_js')
 		
 		<!-- Additional javascript defined in the template -->
-		@yield('extra_head')
+		@yield('crud::extra_head')
 		
     </head>
     <body>
