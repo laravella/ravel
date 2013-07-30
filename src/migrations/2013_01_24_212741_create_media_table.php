@@ -33,7 +33,7 @@ class CreateMediaTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('medias');
+		Schema::dropIfExists('medias');
 	}
 
 }

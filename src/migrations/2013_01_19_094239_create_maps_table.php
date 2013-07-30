@@ -22,7 +22,7 @@ class CreateMapsTable extends Migration {
 					$table->datetime('publish_date');
 					$table->timestamps();
 
-					$table->foreign('author_id')->references('id')->on('users')->onDelete('cascade');
+//					$table->foreign('author_id')->references('id')->on('users')->onDelete('cascade');
 				});
 	}
 
@@ -32,7 +32,7 @@ class CreateMapsTable extends Migration {
 	 * @return void
 	 */
 	public function down() {
-		Schema::drop('contents');
+		Schema::dropIfExists('contents');
 	}
 
 }
