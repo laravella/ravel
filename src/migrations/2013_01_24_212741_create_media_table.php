@@ -16,12 +16,12 @@ class CreateMediaTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('media_type'); // IMAGE FILE | VIDEO FILE | YOUTUBE
-			$table->string('path');
-			$table->string('caption')->default(null);
-			$table->boolean('publish')->default(false);
-			$table->boolean('approved')->default(false);
+			$table->string('path')->nullable();
+			$table->string('caption')->default(null)->nullable();
+			$table->boolean('publish')->default(false)->nullable();
+			$table->boolean('approved')->default(false)->nullable();
 			$table->text('filedata')->nullable();
-			$table->string('keywords')->default(null);
+			$table->string('keywords')->default(null)->nullable();
 			$table->timestamps();
 		});
 	}
