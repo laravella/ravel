@@ -10,7 +10,7 @@ class RavelDatabaseSeeder extends Seeder {
 	public function run()
 	{
 		$this->call('RavelInitSeeder');
-//		$this->call('RavelAdminUserSeeder');
+		$this->call('RavelAdminUserSeeder');
 	}
 
 }

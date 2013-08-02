@@ -15,7 +15,7 @@ Route::filter('ravelauth', function()
 
 Route::get('/admin', function()
 {
-    return Redirect::to('/admin/dashboard');
+    return Redirect::to('/admin/pages/index');
 });
 
 Route::group(array('prefix'=>_ADMIN_BASE_),function()
