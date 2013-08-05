@@ -71,11 +71,11 @@
 							<li {{ (Request::is('/admin/pages/index') ? 'class="active"' : '') }}><a href="{{ URL::to('/admin/pages/index') }}"><i class="icon-file"></i> Pages</a></li>
 							<li {{ (Request::is('/admin/posts/index') ? 'class="active"' : '') }}><a href="{{ URL::to('/admin/posts/index') }}"><i class="icon-pencil"></i> Posts</a></li>
 							<li {{ (Request::is('/admin/categories/index') ? 'class="active"' : '') }}><a href="{{ URL::to('/admin/categories/index') }}"><i class="icon-list"></i> Post Categories</a></li>
+                                                        <li class="divider"></li>
 							<li {{ (Request::is('/admin/medias/index') ? 'class="active"' : '') }}><a href="{{ URL::to('/admin/medias/index') }}"><i class="icon-picture"></i> Media Upload</a></li>
-
 							<li {{ (Request::is('/db/select/medias') ? 'class="active"' : '') }}><a href="/db/select/medias"><i class="icon-picture"></i> Media</a></li>
-<!--							<li {{ (Request::is('/db/select/mcollection_media') ? 'class="active"' : '') }}><a href="/db/select/mcollection_media"><i class="icon-picture"></i> Media Collections</a></li> -->
 							<li {{ (Request::is('/db/select/mcollections') ? 'class="active"' : '') }}><a href="/db/select/mcollections"><i class="icon-picture"></i> Collections</a></li>
+							<li {{ (Request::is('/db/select/galleries') ? 'class="active"' : '') }}><a href="/db/select/galleries"><i class="icon-picture"></i> Galleries</a></li>
 						</ul>								
 					</li>
 				</ul>
