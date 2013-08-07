@@ -21,6 +21,7 @@ class CreateMediaTable extends Migration {
 			$table->boolean('publish')->default(false)->nullable();
 			$table->boolean('approved')->default(false)->nullable();
 			$table->text('filedata')->nullable();
+			$table->integer('gallery_id')->unsigned()->nullable();
 			$table->string('keywords')->default(null)->nullable();
 			$table->timestamps();
 		});
