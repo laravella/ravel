@@ -1,4 +1,4 @@
-<?php namespace Laravella\Ravel;
+<?php namespace Laravella\Cms;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
@@ -6,21 +6,21 @@ use Symfony\Component\Console\Input\InputArgument;
 use Illuminate\Filesystem\Filesystem;
 use Config;
 
-class RavelInstallCommand extends Command {
+class CmsInstallCommand extends Command {
 
 	/**
 	 * The console command name.
 	 *
 	 * @var string
 	 */
-	protected $name = 'ravel:install';
+	protected $name = 'cms:install';
 
 	/**
 	 * The console command description.
 	 *
 	 * @var string
 	 */
-	protected $description = 'Install Ravel including migrations';
+	protected $description = 'Install Cms including migrations';
 
 	/**
 	 * Create a new command instance.
@@ -46,34 +46,34 @@ class RavelInstallCommand extends Command {
 
 		if($this->checkifWorkBench())
 		{
-			$this->call('asset:publish',array('--bench'=>'laravella/ravel'));
-			$this->call('migrate',array('--bench'=>'laravella/ravel'));
+			$this->call('asset:publish',array('--bench'=>'laravella/cms'));
+			$this->call('migrate',array('--bench'=>'laravella/cms'));
 		}
 		else
 		{	
-			$this->call('config:publish',array('package'=>'laravella/ravel'));
-			$this->call('asset:publish',array('package'=>'laravella/ravel'));
-			$this->call('migrate',array('--package'=>'laravella/ravel'));
+			$this->call('config:publish',array('package'=>'laravella/cms'));
+			$this->call('asset:publish',array('package'=>'laravella/cms'));
+			$this->call('migrate',array('--package'=>'laravella/cms'));
 		}
 
-		$this->call('db:seed',array('--class'=>'RavelDatabaseSeeder'));
+		$this->call('db:seed',array('--class'=>'CmsDatabaseSeeder'));
 
 		$this->setupUploadDirectory();
 
-		$this->info('Successfully Completed Installation of Ravel');
+		$this->info('Successfully Completed Installation of CMS');
 	}
 
 
 	public function checkifWorkBench()
 	{
 		$path = __FILE__;
-		return str_contains(strtolower($path),'/workbench/laravella/ravel/');
+		return str_contains(strtolower($path),'/workbench/laravella/cms/');
 	}
 
 	public function setupUploadDirectory()
 	{
 		$publicPath = app()->make('path.public');
-		$ConfigUploadPath = app('config')->get('ravel::media.media_storage_path');
+		$ConfigUploadPath = app('config')->get('cms::media.media_storage_path');
 		$uploadPath = $publicPath .'/'. $ConfigUploadPath;
 
 		if ( ! app('files')->isDirectory($uploadPath))
