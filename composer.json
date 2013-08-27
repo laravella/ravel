@@ -2,15 +2,19 @@
     "name": "laravella/ravel",
     "description": "CMS Package for Laravel 4 powered with Angularjs",
     "keywords": ["ravel","laravel","cms"],
-    "license": "BSD",
+    "license": "MIT",
     "authors": [
         {
             "name": "Raf",
-            "email": "raftalks@gmail.com"
+            "email": "raftalks@gmail.com",
+            "homepage": "http://github.com/raftalks/ravel",
+            "role": "Developer"
         },
         {
-            "name": "Victor",
-            "email": "laravella.cms@gmail.com"
+            "name": "Victor Geere",
+            "email": "laravella.cms@gmail.com",
+            "homepage": "http://github.com/victorgeere/laravella",
+            "role": "Developer"
         }
     ],
     "repositories": [
@@ -21,7 +25,7 @@
     ],            
     "require": {
         "php": ">=5.3.0",
-        "laravel/framework": "4.0.*",
+        "laravel/framework": "4.0.*@dev",
         "laravella/form": "dev-master",
         "mockery/mockery": "0.7.2",
         "intervention/image": "1.4.*"
